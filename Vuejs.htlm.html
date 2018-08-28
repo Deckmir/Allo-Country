@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title> Vue JS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="Bootstrap.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+        <!--
+    <div id="app">
+            {{ message}}
+        </div>
+
+        <div id="app-2">
+            <span v-bind:title="message">
+                Hover your mouse....
+            </span>
+        </div>
+
+        <div id="app-3">
+            <span v-if="seen"> Now you see me</span>
+        </div>
+
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{todo.text}}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <p>{{message}}</p>
+            <button v-on:click="reverseMessage">Reverse Message </button>
+        </div>
+
+        <div id="app-6">
+            <p>{{message}}</p>
+            <input v-model="message">
+        </div>
+        
+        <div id="app-7">
+        <ol>
+ 
+         <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key ="item.id"> 
+          </todo-item>
+        </ol>
+    </div>!-->
+<div id="star">
+ 
+             <star-rating name="test1"></star-rating>
+ 
+           </div>
+
+    <script type="text/x-template" id="modal-template">
+  <transition name="modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-container">
+
+          <div class="modal-header">
+            <slot name="header">
+              default header
+            </slot>
+            <div id="star">
+ 
+             <star-rating ></star-rating>
+ 
+           </div>
+          </div>
+
+          <div class="modal-header">
+            <slot name="body">
+              default body
+            </slot>
+            <div id="star">
+ 
+             <star-rating></star-rating>
+ 
+           </div>
+            
+          </div>
+
+          <div class="modal-header">
+            <slot name="footer">
+              default footer
+          </slot>
+              <div id="star">
+ 
+             <star-rating></star-rating>
+ 
+           </div>
+           </div>
+              <button class="modal-default-button" @click="$emit('close')">
+                OK
+              </button>
+           
+          
+        </div>
+      </div>
+    </div>
+  </transition>
+</script>
+
+<!-- app -->
+<div id="app">
+  <button id="show-modal" @click="showModal = true">Show Modal</button>
+  <!-- use the modal component, pass in the prop -->
+  <modal v-if="showModal" @close="showModal = false">
+    <!--
+      you can use custom content here to overwrite
+      default content
+    -->
+    <h3 slot="header">Tourism</h3>
+    <h3 slot="body">Food</h3>
+    <h3 slot="footer">Price</h3>
+
+  </modal>
+</div>
+
+  </body>
+    <script src="Script.js"></script>
+
+</html>
