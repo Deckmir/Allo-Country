@@ -131,3 +131,89 @@ nav > ul > li >a{
 
 
 
+%visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+.star-rating {
+
+  &__star {
+    display: inline-block;
+    padding: 3px;
+    vertical-align: middle;
+    line-height: 1;
+    font-size: 1.5em;
+    color: #ABABAB;
+    transition: color .2s ease-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+    
+    &.is-selected {
+      color: #FFD700;
+    }
+    
+    &.is-disabled:hover {
+      cursor: default;
+    }
+  }
+
+  &__checkbox {
+    @extend %visually-hidden;
+  }
+}
+
+.star-rating__checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.star-rating__star {
+  display: inline-block;
+  padding: 3px;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 1.5em;
+  color: #ABABAB;
+  transition: color .2s ease-out;
+}
+.star-rating__star:hover {
+  cursor: pointer;
+}
+.star-rating__star.is-selected {
+  color: #FFD700;
+}
+.star-rating__star.is-disabled:hover {
+  cursor: default;
+}
+
+.glyphicon {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.glyphicon:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+a {
+  padding-left: 5px;
+}
+
+.disabled {
+  color: orange;
+}
