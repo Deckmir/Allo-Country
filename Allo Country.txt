@@ -1,7 +1,0 @@
--Interface
-	Mappemonde ( Gros carré pour les continents)
-		Puis liste de plusieurs pays pour les notés et mettre des commentaires qui sont ajoutables et supprimables
-	Page d'accueil 
-
-twitter bootstrap
-	
