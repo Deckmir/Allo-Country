@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title> Vue JS</title>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="Css/style.css">
+      <link rel="stylesheet" href="Css/Bootstrap.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'> 
+       
+
+  </head>
+
+
+<div id="star" ></div>
+
+
+<div id="arrow">
+  <div class="container-fluid">
+  
+    <ul class="list-group">
+      <post v-for="comment in comments" :post="comment"></post>
+    </ul>
+    
+    <div id="comment-box">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter a comment..." v-model="comment" @keyup.enter="postComment">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" @click="postComment">Submit</button>
+          </span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<template id="post-template">
+  <li class="list-group-item">
+    <i class="glyphicon glyphicon-chevron-up" @click="upvote" :class="{disabled: upvoted}"></i>
+    <span class="label label-primary">{{ votes }}</span>
+    <i class="glyphicon glyphicon-chevron-down" @click="downvote" :class="{disabled: downvoted}"></i>
+    <a>{{ post.title }}</a>
+  </li>
+</template>
+
+
+
+    <script type="text/x-template" id="modal-template" >
+  <transition name="modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-container">
+
+          <div class="modal-header">
+            <slot name="header">
+              default header
+            </slot>
+             <div id="star" >
+              <star-rating ></star-rating>
+              </div>
+          </div>
+          <div class="modal-header">
+            <slot name="body">
+              default body
+            </slot> 
+             <div id="star" >
+              <star-rating ></star-rating>
+            </div>
+          </div>
+          <div class="modal-header">
+            <slot name="footer">
+              default footer
+          </slot>
+          <div id="star" >
+              <star-rating ></star-rating>
+            </div>
+           </div>
+
+       
+
+              <button class="modal-default-button" @click="$emit('close')">
+                OK
+              </button>
+
+        </div>
+      </div>
+    </div>
+  </transition>
+</script>
+
+<div id="app">
+  <button id="show-modal" @click="showModal = true">Show Notations</button>
+  <modal v-if="showModal" @close="showModal = false">
+  <h3 slot="header">Tourism</h3>
+    <h3 slot="body">Food</h3>
+    <h3 slot="footer">Price</h3>
+
+  </modal>
+</div>
+ <script src="Script/script_star.js"></script>
+
+  <script src="Script/Script.js"></script>
+   
+    <script src="Script/script_arrow.js"></script>
+
+
+  </body>
+  
+   
+</html>
