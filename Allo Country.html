@@ -3,9 +3,14 @@
 	<head>
 		<title> Allo-Country </title>
 		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="Css/style.css">
     	<link rel="stylesheet" href="Css/Bootstrap.css">
-	 <link rel="stylesheet" href="Css/navigationbar.css">
+		<link rel="stylesheet" href="Css/navigationbar.css">
+		<link rel="stylesheet" href="Css/Country.css">
     </head>
     <body>
        <div class="header">
@@ -15,17 +20,20 @@
         
 <div class="topnav">
 <ul>
-<li><a  class="topnav" onclick="openPage('Home', this, '#333')">World Map</a></li>
-<li><a  class="topnav" onclick="openPage('Africa', this, '#333')">Africa</a></li>
-<li><a  class="topnav"onclick="openPage('Asia', this, '#333')" >Asia</a></li>
-<li><a  class="topnav"onclick="openPage('Europe', this, '#333')">Europe</a></li>
-<li><a  class="topnav"onclick="openPage('North_America', this, '#333')">North America</a ></li>
-<li><a  class="topnav"onclick="openPage('South_America', this, '#333')">South America</a></li>
-<li><a  class="topnav"onclick="openPage('Oceania', this, '#333')">Oceania</a></li>
-<li style="float:right"><a onclick="openPage('Sign_out', this, '#333')">Sign out</a>
+<li><a  class="topnav" onclick="openPage('Home', this, 'gray')">World Map</a></li>
+<li><a  class="topnav" onclick="openPage('Africa', this, 'gray')">Africa</a></li>
+<li><a  class="topnav"onclick="openPage('Asia', this, 'gray')" >Asia</a></li>
+<li><a  class="topnav"onclick="openPage('Europe', this, 'gray')">Europe</a></li>
+<li><a  class="topnav"onclick="openPage('North_America', this, 'gray')">North America</a ></li>
+<li><a  class="topnav"onclick="openPage('Central_America', this, 'gray')">Central America</a ></li>
+<li><a  class="topnav"onclick="openPage('South_America', this, 'gray')">South America</a></li>
+<li><a  class="topnav"onclick="openPage('Oceania', this, 'gray')">Oceania</a></li>
+<li style="float:right"><a onclick="openPage('Sign_out', this, 'gray')">Sign out</a>
 </li>
 </ul>
 </div>
+
+
 
 
 <div id="Home" class="test"> 
@@ -40,8 +48,77 @@
 <div id="Asia" class="test">
 <img src="Img/Asia.jpg">  
 </div>
+<div id="Central_America" class="test">
+	<div id="CAmap">
+			<table id="CAmapTable">
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td id="BACAmap"><a href="BA.html">Bahamas</a></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td id="CUCAmap"><a href="BA.html">Cuba</a></td>
+					<td id="HACAmap"><a href="BA.html">Haiti</a></td>
+					<td id="DOCAmap"><a href="BA.html">Dominican Republic</a></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td id="GUCAmap"><a href="BA.html">Guatemala</a></td>
+					<td id="BECAmap"><a href="BA.html">Belize</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td id="ELCAmap"><a href="BA.html">El Salvador</a></td>
+					<td id="HOCAmap"><a href="BA.html">Honduras</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td id="NICAmap"><a href="BA.html">Nicaragua</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td id="COCAmap"><a href="BA.html">Costa Rica</a></td>
+					<td id="PACAmap"><a href="BA.html">Panama</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+			</table>
+</div>
+	</div>
 <div id="North_America" class="test">
-<img src="Img/North_America.jpg">  
+<div id="NAmap">
+			<table id="NAmapTable">
+				<tr>
+					<td class="NAempty"></td>
+					<td id="CANAmap"><a href="US.html">Canada</a></td>
+				</tr>
+				<tr>
+					<td class="NAempty"></td>
+					<td id="USNAmap"><a href="CA.html">United States of America</a></td>
+				</tr>
+				<tr>
+					<td class="NAempty"></td>
+					<td id="MENAmap"><a href="ME.html">Mexico</a></td>
+				</tr>
+			</table>
+</div>  
 </div>
 <div id="South_America" class="test"> 
     <img src="Img/South_America.jpg"> 
@@ -51,8 +128,9 @@
 </div>
 
 <div id="Sign_out"class="test">
- 
+	</div>
 </div>
+
 
 
 

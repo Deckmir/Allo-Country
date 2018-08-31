@@ -1,78 +1,4 @@
-/*var app = new Vue({
-	el: '#app',
-	data: {
-	message: 'Hello Vue!'
-	}
 
-})
-
-var app2= new Vue({
-	el: '#app-2',
-	data: {
-		message:'You loaded this page on ' + new Date().toLocaleString()
-
-	}
-})
-
-var app3 = new Vue({
-	el: '#app-3',
-	data:{
-		seen:true
-	}
-})
-app3.seen = false
-
-var app4 = new Vue({
-  el: '#app-4',
-  data: {
-    todos: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue' },
-      { text: 'Build something awesome' }
-    ]
-  }
-})
-
-var app5 =new Vue({
-	el : '#app-5',
-	data: {
-		message: 'Hello Vue.js!'
-	},
-	methods:{
-		reverseMessage: function(){
-			this.message = this.message.split('').reverse().join('')
-		}
-
-	}
-})
-
-var app6= new Vue({
-	el: '#app-6',
-	data: {
-		message: 'Hello Vue!'
-	}
-})
-
-Vue.component('todo-item', {
-	props:['todo'],
-  template: '<li>{{ todo.text }}</li>'
-})
-
-var app7= new Vue ({
-el: '#app-7',
-data:{
-	groceryList:[
-	{id: 0, text :'Vegetables'},
-	{id: 1, text : 'Cheese'},
-	{id: 2, text : 'Whatever else humans are supposed to eat'}
-
-	]
-
-
-}
-
-})
-*/
 
 Vue.component('modal', {
   template: '#modal-template'
@@ -85,6 +11,39 @@ new Vue({
     showModal: false
   }
 });
+
+
+
+const app = new Vue({
+  el:'#form',
+  data:{
+    errors:[],
+    name:null,
+    email:null,
+    password:null,
+    password2:null
+    
+  },
+  methods:{
+    checkForm:function(e) {
+      this.errors = [];
+      if(!this.name) this.errors.push("Name required.");
+      if(!this.email) {
+        this.errors.push("Email required.");
+      } else if(!this.validEmail(this.email)) {
+        this.errors.push("Valid email required.");        
+      }
+      if(!this.password)this.errors.push("Password required");
+      if(this.password != this.password2)this.errors.push("Passwords are differents");
+      if(!this.errors.length) return true;
+      e.preventDefault();
+    },
+    validEmail:function(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+    }
+  }
+})
 
 
 
