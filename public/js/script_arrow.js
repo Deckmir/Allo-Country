@@ -62,7 +62,7 @@ var vm = new Vue({
       this.comment = "";
     },
     delComment(index){
-      if(this.comments.static =="1") this.comments.splice(index,1);
+      this.comments.splice(index,1);
     },
        }
   
