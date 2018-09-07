@@ -8,7 +8,7 @@ var img= require("./assets");
 var bodyParser=require('body-parser');
 var fs= require('fs');
 var jsonFile = require('jsonfile');
-var fileName=__dirname + '/data/Data.json';
+var fileName=__dirname + '/public/assets/Data.json';
  
 
 // we've started you off with Express, 
