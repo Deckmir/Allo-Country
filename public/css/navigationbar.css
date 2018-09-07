@@ -1,0 +1,100 @@
+body {
+    background-color: lightblue;
+}
+.header {
+    padding: 0.1px;
+    text-align: center;
+    background-image: url("https://cdn.glitch.com/5453b08a-55b4-46a5-a4ec-b6d64acc3c4b%2F395799649921c1d.jpg?1536328482939");
+    background-size: cover;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.rbody{
+
+   background-image: url("https://cdn.glitch.com/5453b08a-55b4-46a5-a4ec-b6d64acc3c4b%2F395799649921c1d.jpg?1536328482939");
+   background-size: cover;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+.header p{
+    font-size: 20px;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+   
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li:last-child {
+    border-right: none;
+}
+.temp  {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor:default;
+}
+
+.username{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.flag{
+  width:300px;
+  height:300;
+  
+}

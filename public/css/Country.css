@@ -1,0 +1,824 @@
+table{
+	border-collapse:collapse;
+}
+
+/*---------------------Global Map-------------------*/
+
+#globalMapTable a{
+	font-size:25px;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#globalMap{
+	margin:0;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('/assets/WorldMap.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#NAglobalMap{
+	text-align:center;
+	width:20vw;
+	height:35vh;
+}
+
+#EUglobalMap{
+	text-align: left;
+	padding-top:6vh;
+	padding-left:6vw;
+	width:10vw;
+	height:30vh;
+}
+
+#ASglobalMap{
+	width:45vw;
+	height:20vh;
+}
+
+#CAglobalMap{
+	text-align:center;
+	width:20vw;
+	height:15vh;
+}
+
+#AFglobalMap{
+	vertical-align:top;
+	text-align:center;
+	width:10vw;
+	height:20vh;
+}
+
+#MEglobalMap{
+	padding-top:15vh;
+	width:10vw;
+	height:20vh;
+}
+
+#SAglobalMap{
+	text-align:right;
+	width:23vw;
+	height:45vh;
+	padding-left:8vw;
+	border-right-width:10vw;
+}
+
+#OCglobalMap{
+	text-align:center;
+	width:30vw;
+	height:20vh;
+}
+
+.atlanticGlobalMap{
+	width:12vw;
+}
+
+/*---------------------NA map---------------------------*/
+
+#NAmap a{
+	font-size:1.5vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#NAmap{
+	margin:0;
+	width: 50vw;
+	height: 76vh;
+	background-image: url('/assets/North_America.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.NAempty{
+	width:30vw;
+}
+
+#USNAmap{
+	text-align:left;
+	width: 50vw;
+	height: 25vh;
+  text-indent:5vw;
+}
+
+#CANAmap{
+	text-align:left;
+	width: 50vw;
+	height: 40vh;
+	padding-top:20vh;
+	text-indent:7vw;
+}
+
+#MENAmap{
+	text-align:left;
+	width: 50vw;
+	height: 10vh;
+	padding-right: 25vw;
+  text-indent:5vw;
+}
+
+
+/*---------------------CA map---------------------------*/
+
+#CAmap a{
+	font-size:1vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#CAmap{
+	margin:0;
+	width: 80vw;
+	height: 90vh;
+	background-image: url('/assets/Central_America.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#BACAmap{
+	height:35vh;
+	vertical-align:bottom;
+}
+
+#CUCAmap{
+	text-indent:2vw;
+	width:7vw;
+	height:13vh;
+	vertical-align:top;
+}
+
+#HACAmap{
+	width:7vw;
+	height:10vh;
+	text-align:right;
+	vertical-align:bottom;
+}
+
+#DOCAmap{
+	width:15vw;
+	height:10vh;
+	text-indent:1vw;
+	vertical-align:bottom;
+}
+
+#GUCAmap{
+	width:13vw;
+	height:10vh;
+	text-align:right;
+	vertical-align:bottom;
+}
+
+#BECAmap{
+  vertical-align:top;
+	text-indent:1vw;
+	width:8vw;
+	height:7vh;
+}
+
+#ELCAmap{
+	width:10vw;
+	height:7vh;
+	text-align:right;
+	vertical-align:bottom;
+}
+
+#HOCAmap{
+	width:8vw;
+	height:7vh;
+	vertical-align:top;
+	text-align:center;
+}
+
+#NICAmap{
+	width:8vw;
+	height:5vh;
+  text-align:right;
+  vertical-align:top;
+}
+
+#COCAmap{
+	width:8vw;
+	height:10vh;
+}
+
+#PACAmap{
+	width:5vw;
+	height:10vh;
+}
+
+.CAempty1{
+	width:17vw;
+}
+
+/*---------------------SA map---------------------------*/
+
+#SAmap a{
+	font-size:1vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#SAmap{
+	margin:0;
+	width: 50vw;
+	height: 100vh;
+	background-image: url('/assets/South_America.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#COSAmap{
+	text-align:right;
+	vertical-align:bottom;
+}
+
+#VESAmap{
+	height:15vh;
+	width:7vw;
+	padding-top:3vh;
+	vertical-align:top;
+}
+
+#GUSAmap{
+	width:1vw;
+	height:10vh;
+	padding-top:3vh;
+}
+
+#SUSAmap{
+	height:10vh;
+	padding-top:3vh;
+}
+
+#GUSAmap a, #SUSAmap a{
+	font-size:0.5vw;
+}
+
+#BRSAmap{
+	width:18vw;
+	height:12vh;
+}
+
+#ECSAmap{
+	text-align:right;
+	height:10vh;
+}
+
+#BOSAmap{
+	text-align:right;
+}
+
+#PESAmap{
+	text-align:center;
+}
+
+#ARSAmap{
+	text-align:right;
+}
+
+#PASAmap a,#URSAmap a{
+  font-size:0.8vw;
+}
+
+.SAempty1{
+	height:10vh;
+	width:15vw;
+}
+
+/*---------------------EU map---------------------------*/
+
+#EUmap a{
+	font-size:0.8vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#EUmap{
+	margin:0;
+	width: 50vw;
+	height: 85vh;
+	background-image: url('/assets/Europe.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#EUmap td{
+  border:0.1px solid red;
+}
+
+#ICEUmap{
+	width:12vw;
+	height:29vh;
+	padding-top:7vh;
+	text-indent:2vw;
+}
+
+#IREUmap{
+	text-align:right;
+	vertical-align:top;
+}
+
+#UNEUmap{
+	width:5vw;
+	height:9vh;
+	text-indent:2vw;
+	text-align:center;
+}
+
+#BEEUmap{
+	width:5vw;
+	text-align:right;
+}
+
+#NOEUmap{
+	width:5vw;
+	vertical-align:bottom;
+}
+
+#SWEUmap{
+	width:4vw;
+	vertical-align:bottom;
+}
+
+#FIEUmap{
+	width:5vw;
+	text-indent:1vw;
+}
+
+#ESEUmap{
+	height:4vh;
+	text-indent:1vw;
+}
+
+#LAEUmap{
+	height:4vh;
+}
+
+#FREUmap{
+	height:5vh;
+}
+
+#ITEUmap{
+	text-align:center;
+	height:10vh;
+	vertical-align:top;
+}
+
+#GEEUmap, #POEUmap{
+	text-align:right;
+}
+
+#BLEUmap{
+	text-align:right;
+	vertical-align:top;
+}
+
+#CZEUmap{
+	height:5vh;
+	vertical-align:top;
+}
+
+#CZEUmap a{
+	font-size:0.5vw;
+}
+
+#SWEUmap{
+	vertical-align:bottom;
+}
+
+#AUEUmap{
+	vertical-align:top;
+}
+
+#HUEUmap a, #SKEUmap a{
+	font-size:0.8vw;
+}
+
+#SKEUmap{
+	vertical-align:bottom;
+}
+
+#UKEUmap{
+	text-align:right;
+	width:4vw;
+  height:5vh;
+}
+
+#ROEUmap{
+	text-align:right;
+	vertical-align:bottom;
+}
+
+#SPEUmap{
+	height:14vh;
+}
+
+#PLEUmap{
+	text-align:center;
+	text-indent:4vw;
+}
+#RUEUmap{
+	width:4vw;
+}
+
+#CREUmap{
+	vertical-align:top;
+	text-align:right;
+}
+
+#BUEUmap{
+	text-align:right;
+	vertical-align:bottom;
+}
+
+/*---------------------AS map---------------------------*/
+
+#ASmap a{
+	font-size:0.9vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#ASmap{
+	margin:0;
+	width: 70vw;
+	height: 76vh;
+	background-image: url('/assets/Asia.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#KAASmap{
+	padding-top:8vh;
+	height:17vh;
+	width:14vw;
+	text-align:right;
+}
+
+#UZASmap{
+	height:7vh;
+	text-align:right;
+}
+
+#TUASmap{
+	height:5vh;
+	text-align:right;
+}
+
+#IRASmap{
+	height:12vh;
+	text-align:center;
+	text-indent:5vw;
+}
+
+#INASmap{
+  text-align:center;
+}
+
+#AFASmap{
+	width:8vw;
+}
+
+#TAASmap{
+	text-indent:4vw;
+}
+
+#TAASmap a, #UZASmap a, #TUASmap a, #AFASmap a, #KIASmap a, #NEASmap a, #NOASmap a, #SOASmap a{
+	font-size:0.7vw;
+}
+
+#KIASmap{
+	text-indent:5vw;
+	vertical-align:bottom;
+}
+
+#PAASmap{
+	text-indent:1vw;
+	height:10vh;
+	vertical-align:top;
+}
+
+#NEASmap{
+	vertical-align:top;
+	width:7vw;
+	text-align:right;
+}
+
+#BAASmap{
+	vertical-align:bottom;
+	text-align:center;
+	width:4vw;
+}
+
+#BAASmap a, #THASmap a, #CAASmap a, #VIASmap a, #LAASmap a{
+	font-size:0.6vw;
+}
+
+#MYASmap{
+	height:8vh;
+	text-align:center;
+	width:4vw;
+	vertical-align:top;
+}
+
+#MOASmap{
+	vertical-align:bottom;
+}
+
+#LAASmap{
+	text-align:right;
+}
+
+#THASmap{
+	vertical-align:top;
+	height:10vh;
+}
+
+#VIASmap{
+	vertical-align:top;
+}
+
+#NOASmap{
+	text-align:center;
+	text-indent:3vw;
+	vertical-align:top;
+}
+
+#SOASmap{
+	text-align:right;
+	vertical-align:top;
+	width:9vw;
+}
+
+#JAASmap{
+	text-align:center;
+	width:7vw;
+}
+
+#PHASmap{
+	text-align:right;
+}
+
+/*---------------------OC map---------------------------*/
+
+#OCmap a{
+	font-size:1vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#OCmap{
+	margin:0;
+	width: 60vw;
+	height: 85vh;
+	background-image: url('/assets/Oceania.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#MAOCmap{
+	width:15vw;
+	text-align:right;
+	height:17vh;
+	vertical-align:bottom;
+}
+
+#INOCmap{
+	height:20vh;
+	width:16vw;
+}
+
+#AUOCmap{
+	text-align:center;
+	height:30vh;
+}
+
+#NEOCmap{
+	height:15vh;
+}
+
+/*---------------------ME map---------------------------*/
+
+#MEmap a{
+	font-size:1vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#MEmap{
+	margin:0;
+	width: 50vw;
+	height: 80vh;
+	background-image: url('/assets/middleEast.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#TUMEmap{
+	width:14vw;
+	text-align:right;
+	height:10vh;
+}
+
+#GEMEmap a, #ARMEmap a, #AZMEmap a, #EMMEmap a, #LEMEmap a, #ISMEmap a, #JOMEmap a{
+	font-size:0.8vw;
+}
+
+#SYMEmap{
+	width:4vw;
+	height:9vh;
+	text-align:center;
+}
+
+#IRMEmap{
+	text-align:center;
+}
+
+#LEMEmap, #ISMEmap{
+	text-align:right;
+	vertical-align:bottom;
+}
+
+#ARMEmap{
+	vertical-align:top;
+	width:4vw;
+}
+
+#AZMEmap{
+	vertical-align:top;
+	width:7vw;
+}
+
+#GEMEmap{
+	height:12vh;
+	vertical-align:bottom;
+}
+
+#JOMEmap{
+	height:5vh;
+	vertical-align:top;
+}
+
+#SAMEmap{
+	height:19vh;
+}
+
+#EMMEmap{
+	vertical-align:bottom;
+	width:8vw;
+}
+
+#OMMEmap{
+	text-align:right;
+	height:20vh;
+	vertical-align:top;
+}
+
+#YEMEmap{
+	vertical-align:bottom;
+}
+
+/*---------------------AF map---------------------------*/
+
+#AFmap a{
+	font-size:0.8vw;
+	color:white;
+	text-shadow: 0.1vw 0 0 #000, 0 -0.1vh 0 #000, 0 0.1vw 0 #000, -0.1vw 0 0 #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#AFmap{
+	margin:0;
+	width: 40vw;
+	height: 85vh;
+	background-image: url('/assets/Africa.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#MOAFmap{
+	width:8vw;
+	vertical-align:top;
+	height:15vh;
+	padding-top:5vh;
+	text-align:right;
+}
+
+#ALAFmap{
+	width:6vw;
+	text-align:center;	
+	vertical-align:bottom;
+}
+
+#TUAFmap{
+	padding-top:3vh;
+	vertical-align:top;
+	width:4vw;
+}
+
+#LIAFmap{
+	width:5.5vw;
+	vertical-align:bottom;
+}
+
+#EGAFmap{
+	width:5vw;
+	vertical-align:bottom;
+}
+
+#MAAFmap{
+	text-align:right;
+	height:13vh;
+}
+
+#MLAFmap{
+	text-indent:1vw;
+}
+
+#NIAFmap, #SUAFmap, #CHAFmap, #ERAFmap{
+	vertical-align:bottom;
+}
+
+#NGAFmap, #NAAFmap{
+	height:12vh;
+}
+
+#CEAFmap a, #COAFmap a, #UGAFmap a, #MZAFmap a, #BOAFmap a, #ZIAFmap a{
+	font-size:0.6vw;
+}
+
+#CEAFmap{
+	vertical-align:bottom;
+}
+
+#COAFmap{
+	vertical-align:top;
+}
+
+#ERAFmap{
+	width:4vw;
+}
+
+#GAAFmap{
+	height:7vh;
+	vertical-align:bottom;
+}
+
+#UGAFmap{
+	text-align:center;
+}
+
+#DEAFmap{
+	text-align:right;
+}
+
+#TAAFmap{
+	text-align:right;
+	height:11vh;
+}
+
+#ANAFmap{
+	height:7vh;
+}
+
+#BOAFmap{
+	text-align:right;
+}
+
+#GUAFmap{
+	padding-top:3vh;
+	vertical-align:top;
+	text-align:center;
+	text-indent:2vw;
+}
+
+#SAAFmap{
+	text-align:right;
+}
+
+#ZIAFmap{
+	vertical-align:top;
+}
+
+#MDAFmap{
+	vertical-align:bottom;
+}

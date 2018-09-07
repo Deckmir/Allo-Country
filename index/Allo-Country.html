@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title> Allo-Country </title>
+		<meta charset="utf-8">
+	  	<link rel="stylesheet" href="/css/style.css">
+    	<link rel="stylesheet" href="/css/Bootstrap.css">
+      <link rel="stylesheet" href="/css/Country.css">
+	    <link rel="stylesheet" href="/css/navigationbar.css">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       
+    
+
+  </head>
+  
+    <body>
+       <div class="header">
+         <h1>Allo-Country</h1>
+         <p>Evaluate the different country you visited!</p>
+    </div>
+      <div class="rbody">
+        
+     
+<div class="topnav">
+<ul>
+<li><a  id="Home1" class="topnav" onclick="openPage('Home', this, 'gray')">World Map</a></li>
+<li><a  class="topnav" onclick="openPage('Africa', this, 'gray')">Africa</a></li>
+<li><a  class="topnav" onclick="openPage('Asia', this, 'gray')" >Asia</a></li>
+<li><a  class="topnav" onclick="openPage('Europe', this, 'gray')">Europe</a></li>
+<li><a  class="topnav" onclick="openPage('Middle_East', this, 'gray')">Middle East</a></li>  
+<li><a  class="topnav" onclick="openPage('North_America', this, 'gray')">North America</a ></li>
+<li><a  class="topnav" onclick="openPage('Central_America', this, 'gray')">Central America</a ></li>
+<li><a  class="topnav" onclick="openPage('South_America', this, 'gray')">South America</a></li>
+<li><a  class="topnav" onclick="openPage('Oceania', this, 'gray')">Oceania</a></li>
+<li style="float:right"><a onclick="openPage('Sign_out', this, 'gray')" href="/Formulaire.html">Sign out</a>
+</li>
+</ul>
+</div>
+  
+
+     <table>
+       <tr>
+       <td>
+        
+<div id="Home" class="test"> 
+   	<div id="globalMap">
+			<table id="globalMapTable">
+				<tr>
+					<td id="NAglobalMap"><a class="topnav" style="cursor:pointer" onclick="openPage('North_America', this, 'gray')">North America</a></td>
+					<td class="atlanticGlobalMap"></td>
+					<td id="EUglobalMap"><a class="topnav" style="cursor:pointer" onclick="openPage('Europe', this, 'gray')">Europe</a></td>
+					<td id="MEglobalMap"><br /><br /><br/><br /><a style="cursor:pointer" class="topnav" onclick="openPage('Middle_East', this, 'gray')" >Middle East</a></td>
+					<td id="ASglobalMap"><a class="topnav" style="cursor:pointer" onclick="openPage('Asia', this, 'gray')" >Asia</a></td>
+        </tr>
+				<tr>
+					<td id="CAglobalMap"><a class="topnav" style="cursor:pointer" onclick="openPage('Central_America', this, 'gray')">Central America</a></td>
+					<td class="atlanticGlobalMap"></td>
+					<td id="AFglobalMap" rowspan="2"><a class="topnav" style="cursor:pointer" onclick="openPage('Africa', this, 'gray')">Africa</a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td id="SAglobalMap"><a class="topnav" style="cursor:pointer" onclick="openPage('South_America', this, 'gray')">South America</a></td>
+					<td class="atlanticGlobalMap"></td>
+					<td></td>
+					<td id="OCglobalMap"><a class="topnav" style="cursor:pointer" onclick="openPage('Oceania', this, 'gray')">Oceania</a></td>
+				</tr>
+      </table>
+		</div>
+</div>
+<div id="Europe" class="test">
+    <div id="EUmap">
+			<table id="EUmapTable">
+				<tr>
+					<td id="ICEUmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Iceland">Iceland</a></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td id="NOEUmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Norway">Norway</a></td>
+					<td id="SWEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Sweden">Sweden</a></td>
+					<td class="EUempty"></td>
+					<td id="FIEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Finland"><br/><br/><br/><br/>Finland</a></td>
+					<td class="EUempty"></td>
+				</tr>
+				<tr>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td id="ESEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Estonia">Estonia</a></td>
+					<td id="RUEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Russia">Russia</a></td>
+				</tr>
+				<tr>
+					<td class="EUempty1"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td id="LAEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Latvia">Latvia</a></td>
+					<td class="EUempty"></td>
+				</tr>
+				<tr>
+					<td class="EUempty1"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td id="LIEUmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Lithuania">Lithuania</a></td>
+					<td class="EUempty"></td>
+				</tr>
+				<tr>
+					<td id="IREUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Ireland">Ireland</a></td>
+					<td id="UNEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-United">United Kingdom</a></td>
+					<td id="BEEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Belgium"><br/><br/>Belgium</a></td>
+					<td id="GEEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Germany"><br/><br/>Germany</a></td>
+					<td class="EUempty"></td>
+					<td id="PLEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Poland"><br/><br/>Poland</a></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+				</tr>
+				<tr>
+					<td class="EUempty1"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td id="UKEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Ukraine">Ukraine</a></td>
+				</tr>
+				<tr>
+					<td class="EUempty1"></td>
+					<td class="EUempty"></td>
+					<td id="FREUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-France">France</a></td>
+					<td id="SSEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Swiss">Swiss</a></td>
+					<td id="AUEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Austria">Austria</a></td>
+					<td id="HUEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Hungary">Hungary</a></td>
+					<td id="ROEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Romania">Romania</a></td>
+					<td class="EUempty"></td>
+				</tr>
+				<tr>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td id="ITEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Italy">Italy</a></td>
+					<td id="CREUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Croatia">Croatia</a></td>
+					<td class="EUempty"></td>
+					<td id="BUEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Bulgaria">Bulgaria</a></td>
+					<td class="EUempty"></td>
+				</tr>
+				<tr>
+					<td id="POEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Portugal">Portugal</a></td>
+					<td id="SPEUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Spain">Spain</a></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td class="EUempty"></td>
+					<td id="GREUmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Greece">Greece</a></td>
+					<td class="EUempty"></td>
+				</tr>
+			</table>
+		</div>
+</div>
+<div id="Asia" class="test">
+<div id="ASmap">
+			<table id="ASmapTable">
+				<tr>
+					<td id="KAASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Kazakstan">Kazakhstan</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td id="MOASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Mongolia">Mongolia</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+				</tr>
+				<tr>
+					<td id="UZASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Uzbekistan">Uzbekistan</a></td>
+					<td id="KIASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Kirghiztan">Kirghiztan</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+				</tr>
+				<tr>
+					<td id="TUASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Turkmenistan">Turkmenistan</a></td>
+					<td id="TAASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Takijistan">Tajikistan</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td id="NOASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Northk">North Korea</a></td>
+					<td id="JAASmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Japan">Japan</a></td>
+				</tr>
+				<tr>
+					<td id="IRASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Iran">Iran</a></td>
+					<td id="AFASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Afghanistan">Afghanistan</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td id="CHASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-China">China</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td id="SOASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Southk">South Korea</a></td>
+					<td class="ASempty"></td>
+				</tr>
+				<tr>
+					<td class="ASempty"></td>
+					<td id="PAASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Pakistan">Pakistan</a></td>
+					<td id="NEASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Nepal">Nepal</a></td>
+					<td id="BAASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Bangladesh">Bangladesh</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+				</tr>
+				<tr>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td id="INASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-India">India</a></td>
+					<td class="ASempty"></td>
+					<td id="MYASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Myanmar">Myanmar</a></td>
+					<td id="LAASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Laos">Laos</a></td>
+					<td id="VIASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Vietnam">Vietnam</a></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+				</tr>
+				<tr>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td class="ASempty"></td>
+					<td id="THASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Thailand">Thailand</a></td>
+					<td id="CAASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Cambodia">Cambodia</a></td>
+					<td id="PHASmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Philippines">Philippines</a></td>
+					<td class="ASempty"></td>
+				</tr>
+			</table>
+		</div>
+</div>
+<div id="Middle_East" class="test">
+  <div id="MEmap">
+			<table id="MEmapTable">
+				<tr>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+					<td id="GEMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Georgia">Georgia</a></td>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+				</tr>
+				<tr>
+					<td id="TUMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Turkey">Turkey</a></td>
+					<td class="MEempty"></td>
+					<td id="ARMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Armenia">Armenia</a></td>
+					<td id="AZMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Azerbaidjan">Azerbaidjan</a></td>
+					<td class="MEempty"></td>
+				</tr>
+				<tr>
+					<td id="LEMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Lebanon">Lebanon</a></td>
+					<td id="SYMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Syria">Syria</a></td>
+					<td id="IRMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Iraq">Iraq</a></td>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+				</tr>
+				<tr>
+					<td id="ISMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Israel">Israel</a></td>
+					<td id="JOMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Jordan">Jordan</a></td>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+				</tr>
+				<tr>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+					<td id="SAMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Arabia">Saudi Arabia</a></td>
+					<td class="MEempty"></td>
+					<td id="EMMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Emirates">United Arab<br/>Emirates</a></td>
+				</tr>
+				<tr>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+					<td class="MEempty"></td>
+					<td id="YEMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Yemen">Yemen</a></td>
+					<td id="OMMEmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Oman">Oman</a></td>
+				</tr>
+			</table>
+		</div>
+         </div>
+<div id="Central_America" class="test">
+	<div id="CAmap">
+			<table id="CAmapTable">
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td id="BACAmap"><a id ="Bahamas"  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Bahamas">Bahamas</a></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td id="CUCAmap"><a id = "Cuba" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Cuba">Cuba</a></td>
+					<td id="HACAmap"><a id = "Haiti" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Haiti">Haiti</a></td>
+					<td id="DOCAmap"><a id = "Dominican Republic" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Dominique">Dominican Republic</a></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td id="GUCAmap"><a id =" Guatamela" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Guatemala">Guatamela</a></td>
+					<td id="BECAmap"><a id ="Belize" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Belize">Belize</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td id="ELCAmap"><a id =" El Salvador" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Salvador">El Salvador</a></td>
+					<td id="HOCAmap"><a id =" Honduras" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Honduras">Honduras</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td id="NICAmap"><a id = "Nicaragua" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Nicaragua">Nicaragua</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+				<tr>
+					<td class="CAempty1"></td>
+					<td class="CAempty"></td>
+					<td id="COCAmap"><a id=" Costa Rica" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Costa">Costa Rica</a></td>
+					<td id="PACAmap"><a id ="Panama" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Panama">Panama</a></td>
+					<td class="CAempty"></td>
+					<td class="CAempty"></td>
+				</tr>
+			</table>
+</div>
+	</div>
+<div id="Africa" class="test">
+<div id="AFmap">
+  <table id="AFmapTable">
+		<tr>
+			<td id="MOAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Morocco">Morocco</a></td>
+			<td id="ALAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Algeria">Algeria</a></td>
+			<td id="TUAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Tunisia">Tunisia</a></td>
+			<td id="LIAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Libya">Libya</a></td>
+			<td id="EGAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Egypt">Egypt</a></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+		</tr>
+		<tr>
+			<td id="MAAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Mauritania">Mauritania</a></td>
+			<td id="MLAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Mali">Mali</a></td>
+			<td id="NIAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Niger">Niger</a></td>
+			<td id="CHAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Chad">Chad</a></td>
+			<td id="SUAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Sudan">Sudan</a></td>
+			<td id="ERAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Eritrea">Eritrea</a></td>
+			<td class="AFempty"></td>
+		</tr>
+		<tr>
+			<td id="GUAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Guinea">Guinea</a></td>
+			<td id="COAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Coted">Cote d'Ivoire</a></td>
+			<td id="NGAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Nigeria">Nigeria</a></td>
+			<td id="CEAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Central">Central African Republica</a></td>
+			<td class="AFempty"></td>
+			<td id="ETAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Ethiopia">Ethiopia</a></td>
+			<td id="SOAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Somalia">Somalia</a></td>
+		</tr>
+		<tr>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td id="GAAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Gabon">Gabon</a></td>
+	  	<td id="DEAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-DRC">DRC</a></td>
+			<td id="UGAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Uganda">Uganda</a></td>
+			<td id="KEAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Kenya">Kenya</a></td>
+			<td class="AFempty"></td>
+		</tr>
+		<tr>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td id="TAAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Tanzania">Tan</a></td>
+			<td id="TAAFmap2"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Tanzania">zania</a></td>
+			<td class="AFempty"></td>
+		</tr>
+		<tr>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td id="ANAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Angola">Angola</a></td>
+			<td id="ZAAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Zambia">Zambia</a></td>
+			<td id="MZAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Mozambique">Mozambique</a></td>
+			<td id="MDAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Madagascar">Madagascar</a></td>
+		</tr>
+		<tr>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td id="NAAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Namibia">Namibia</a></td>
+			<td id="BOAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Botswana">Botswana</a></td>
+			<td id="ZIAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Zimbabwe">Zimbabwe</a></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+		</tr>
+		<tr>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+	  	<td id="SAAFmap"><a style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Southa">South Africa</a></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+			<td class="AFempty"></td>
+		</tr>
+	</table>
+</div>
+</div>
+         
+     
+<div id="North_America" class="test">
+<div id="NAmap">
+			<table id="NAmapTable">
+				<tr>
+					<td class="NAempty"></td>        
+          <td id="CANAmap"><a id="Canada" value="Canada" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Canada">Canada</a> </td>
+				</tr>
+        <tr>
+					<td class="NAempty"></td>
+					<td id="USNAmap"><a id="USA" value="USA" style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-USA">United States of America</a></td>
+          
+				</tr>
+				<tr>
+					<td class="NAempty"></td>
+					<td id="MENAmap"><a id="Mexico" value="Mexico"   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Mexico">Mexico</a></td>
+				</tr>
+			</table>
+</div>  
+</div>
+<div id="South_America" class="test"> 
+    <div id="SAmap">
+			<table id="SAmapTable">
+				<tr>
+					<td class="SAempty1"></td>
+					<td id="COSAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Colombia">Colombia</a></td>
+					<td id="VESAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Venezuela">Venezuela</a></td>
+					<td id="GUSAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Guyana">Guyana</a></td>
+					<td id="SUSAmap"><br/><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Suriname">Suriname</a></td>
+					<td class="SAempty"></td>
+				</tr>
+				<tr>
+					<td id="ECSAmap"><a    style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Ecuador">Ecuador</a></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+				</tr>
+				<tr>
+					<td class="SAempty1"></td>
+					<td id="PESAmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Peru">Peru</a></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+					<td id="BRSAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Brazil">Brazil</a></td>
+				</tr>
+				<tr>
+					<td class="SAempty1"></td>
+					<td class="SAempty"></td>
+					<td id="BOSAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Bolivia">Bolivia</a></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+					<td class="SAempty"></td>
+				</tr>
+				<tr>
+					<td class="SAempty1"></td>
+					<td class="SAempty"></td>
+					<td id="CHSAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Chile">Chile</a></td>
+					<td class="SAempty"></td>
+					<td id="PASAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Paraguay">Paraguay</a></td>
+					<td class="SAempty"></td>
+				</tr>
+				<tr>
+					<td class="SAempty1"></td>
+					<td class="SAempty"></td>
+					<td id="ARSAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Argentina">Argenti</a></td>
+					<td id="ARSAmap2"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Argentina">na</a></td>
+					<td id="URSAmap"><a   style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Uruguay">Uruguay</a></td>
+					<td class="SAempty"></td>
+				</tr>
+			</table>
+		</div>
+</div>
+<div id="Oceania" class="test"> 
+   <div id="OCmap">
+			<table id="OCmapTable">
+				<tr>
+					<td id="MAOCmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Malaysia">Malaysia</a></td>
+					<td class="OCempty"></td>
+					<td class="OCempty"></td>
+					<td class="OCempty"></td>
+				</tr>
+				<tr>
+					<td class="OCempty"></td>
+					<td id="INOCmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Indonesia">Indonesia</a></td>
+					<td id="PAOCmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Guina">Papua New<br/> Guinea</a></td>
+					<td class="OCempty"></td>
+				</tr>
+				<tr>
+					<td class="OCempty"></td>
+					<td id="AUOCmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Australia">Australia</a></td>
+					<td class="OCempty"></td>
+					<td class="OCempty"></td>
+				</tr>
+				<tr>
+					<td class="OCempty"></td>
+					<td class="OCempty"></td>
+					<td class="OCempty"></td>
+					<td id="NEOCmap"><a  style="cursor: pointer" data-toggle="modal" data-target=".bd-example-modal-lg-Newz">New Zealand</a></td>
+				</tr>
+			</table>
+  </div>
+</div>
+      
+
+<div id="Sign_out" ></div>
+    </td><td>
+            
+      
+         
+         <div>
+           
+
+<div id="arrow">
+  <div class="container-fluid">
+  
+    <ul class="list-group">
+      <post v-for="comment in comments" :post="comment" v-on:remove="delComment(index)"></post>
+    </ul>
+    
+    <div id="comment-box">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter a comment..." v-model="comment" @keyup.enter="postComment">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" @click="postComment">Submit</button>
+          </span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+           
+<template id="post-template">
+  <li class="list-group-item">
+    <i class="glyphicon glyphicon-chevron-up" @click="upvote" :class="{disabled: upvoted}"></i>
+    <span class="label label-primary">{{ votes }}</span>
+    <i class="glyphicon glyphicon-chevron-down" @click="downvote" :class="{disabled: downvoted}"></i>
+    <a class="temp">{{ post.title }}</a>
+    <a class="username">{{post.username}}</a>
+    <button v-on:click="remove"> X  </button>
+  </li>
+</template>
+        </div>
+         
+            </td></tr>
+      </table>
+         
+         
+         
+         
+    <div id="pop-BAHAMAS"><pop-up-bahamas> </pop-up-bahamas> </div>
+    <div id="pop-CUBA"><pop-up-cuba> </pop-up-cuba> </div>
+    <div id="pop-HAITI"><pop-up-haiti> </pop-up-haiti> </div>
+    <div id="pop-DOMINIQUE"><pop-up-dominique> </pop-up-dominique></div>
+    <div id="pop-GUATEMALA"><pop-up-guatemala> </pop-up-guatemala></div> 
+    <div id="pop-BELIZE"><pop-up-belize> </pop-up-belize></div>
+    <div id="pop-SALVADOR"><pop-up-salvador> </pop-up-salvador></div> 
+    <div id="pop-NICARAGUA"><pop-up-nicaragua> </pop-up-nicaragua></div> 
+    <div id="pop-HONDURAS"><pop-up-honduras> </pop-up-honduras></div> 
+    <div id="pop-COSTA"><pop-up-costa> </pop-up-costa></div> 
+    <div id="pop-PANAMA"><pop-up-panama> </pop-up-panama></div> 
+    <div id="pop-MEXICO"><pop-up-mexico> </pop-up-mexico> </div>
+    <div id="pop-USA"> <pop-up-usa> </pop-up-usa></div> 
+    <div id="pop-CANADA"><pop-up-canada></pop-up-canada></div>
+    <div id="pop-VENEZUELA"><pop-up-venezuela></pop-up-venezuela></div>
+    <div id="pop-GUYANA"><pop-up-guyana></pop-up-guyana></div>
+    <div id="pop-SURINAME"><pop-up-suriname></pop-up-suriname></div>
+    <div id="pop-BRAZIL"><pop-up-brazil></pop-up-brazil></div>
+    <div id="pop-PARAGUAY"><pop-up-paraguay></pop-up-paraguay></div>  
+    <div id="pop-URUGUAY"><pop-up-uruguay></pop-up-uruguay></div>
+    <div id="pop-ARGENTINA"><pop-up-argentina></pop-up-argentina></div>
+    <div id="pop-CHILE"><pop-up-chile></pop-up-chile></div>    
+    <div id="pop-BOLIVIA"><pop-up-bolivia></pop-up-bolivia></div>
+    <div id="pop-PERU"><pop-up-peru></pop-up-peru></div>
+    <div id="pop-ECUADOR"><pop-up-ecuador></pop-up-ecuador></div>
+    <div id="pop-COLOMBIA"><pop-up-colombia></pop-up-colombia></div>
+      
+    <div id="pop-PORTUGAL"><pop-up-portugal></pop-up-portugal></div>
+    <div id="pop-SPAIN"><pop-up-spain></pop-up-spain></div>  
+    <div id="pop-FRANCE"><pop-up-france></pop-up-france></div>
+    <div id="pop-UNITED"><pop-up-united></pop-up-united></div>
+    <div id="pop-IRELAND"><pop-up-ireland></pop-up-ireland></div>
+    <div id="pop-ICELAND"><pop-up-iceland></pop-up-iceland></div>
+    <div id="pop-BELGIUM"><pop-up-belgium></pop-up-belgium></div>
+    <div id="pop-GERMANY"><pop-up-germany></pop-up-germany></div>
+    <div id="pop-AUSTRIA"><pop-up-austria></pop-up-austria></div>
+    <div id="pop-ITALY"><pop-up-italy></pop-up-italy></div>
+    <div id="pop-SWISS"><pop-up-swiss></pop-up-swiss></div>
+    <div id="pop-CROATIA"><pop-up-croatia></pop-up-croatia></div>  
+    <div id="pop-NORWAY"><pop-up-norway></pop-up-norway></div>
+    <div id="pop-SWEDEN"><pop-up-sweden></pop-up-sweden></div>
+    <div id="pop-FINLAND"><pop-up-finland></pop-up-finland></div>
+    <div id="pop-ESTONIA"><pop-up-estonia></pop-up-estonia></div>
+    <div id="pop-LATVIA"><pop-up-latvia></pop-up-latvia></div>
+    <div id="pop-LITHUANIA"><pop-up-lithuania></pop-up-lithuania></div>
+    <div id="pop-RUSSIA"><pop-up-russia></pop-up-russia></div>  
+    <div id="pop-UKRAINE"><pop-up-ukraine></pop-up-ukraine></div>  
+    <div id="pop-ROMANIA"><pop-up-romania></pop-up-romania></div>
+    <div id="pop-POLAND"><pop-up-poland></pop-up-poland></div>
+    <div id="pop-BULGARIA"><pop-up-bulgaria></pop-up-bulgaria></div>  
+    <div id="pop-HUNGARY"><pop-up-hungary></pop-up-hungary></div>
+    <div id="pop-GREECE"><pop-up-greece></pop-up-greece></div>
+      
+    <div id="pop-TURKEY"><pop-up-turkey></pop-up-turkey></div>
+    <div id="pop-SYRIA"><pop-up-syria></pop-up-syria> </div>
+    <div id="pop-IRAQ"><pop-up-iraq></pop-up-iraq> </div>
+    <div id="pop-GEORGIA"><pop-up-georgia></pop-up-georgia> </div>
+    <div id="pop-ARMENIA"><pop-up-armenia></pop-up-armenia> </div>
+    <div id="pop-AZERBAIDJAN"><pop-up-azerbaidjan></pop-up-azerbaidjan> </div>
+    <div id="pop-JORDAN"><pop-up-jordan></pop-up-jordan> </div>
+    <div id="pop-LEBANON"><pop-up-lebanon></pop-up-lebanon> </div>
+    <div id="pop-ISRAEL"><pop-up-israel></pop-up-israel> </div>
+    <div id="pop-ARABIA"><pop-up-arabia></pop-up-arabia> </div>
+    <div id="pop-EMIRATE"><pop-up-emirate></pop-up-emirate> </div>
+    <div id="pop-OMAN"><pop-up-oman></pop-up-oman> </div>
+    <div id="pop-YEMEN"><pop-up-yemen></pop-up-yemen> </div>
+      
+      
+      
+    <div id="pop-NORTHK"><pop-up-northk></pop-up-northk> </div>
+    <div id="pop-SOUTHK"><pop-up-southk></pop-up-southk> </div>
+    <div id="pop-JAPAN"><pop-up-japan></pop-up-japan> </div>
+    <div id="pop-CHINA"><pop-up-china></pop-up-china></div>
+    <div id="pop-PHILIPPINES"><pop-up-philippines></pop-up-philippines></div>
+    <div id="pop-VIETNAM"><pop-up-vietnam></pop-up-vietnam></div>
+    <div id="pop-CAMBODIA"><pop-up-cambodia></pop-up-cambodia></div>
+    <div id="pop-LAOS"><pop-up-laos></pop-up-laos></div>
+    <div id="pop-THAILAND"><pop-up-thailand></pop-up-thailand> </div>
+    <div id="pop-MYANMAR"><pop-up-myanmar></pop-up-myanmar> </div>
+    <div id="pop-BANGLADESH"><pop-up-bangladesh></pop-up-bangladesh> </div>
+    <div id="pop-NEPAL"><pop-up-nepal></pop-up-nepal></div>
+    <div id="pop-PAKISTAN"><pop-up-pakistan></pop-up-pakistan> </div>
+    <div id="pop-AFGHANISTAN"><pop-up-afghanistan></pop-up-afghanistan> </div>
+    <div id="pop-IRAN"><pop-up-iran></pop-up-iran> </div>
+    <div id="pop-TURKMENISTAN"><pop-up-turkmenistan></pop-up-turkmenistan> </div>
+    <div id="pop-UZBEKISTAN"><pop-up-uzbekistan></pop-up-uzbekistan> </div>
+    <div id="pop-KAZAKSTAN"><pop-up-kazakstan></pop-up-kazakstan></div>
+    <div id="pop-KIRGHIZTAN"><pop-up-kirghiztan></pop-up-kirghiztan> </div>
+    <div id="pop-TAKIJISTAN"><pop-up-takijistan></pop-up-takijistan> </div>
+    <div id="pop-MONGOLIA"><pop-up-mongolia></pop-up-mongolia> </div>
+      
+      
+      
+      
+    <div id="pop-MALAYSIA"><pop-up-malaysia></pop-up-malaysia> </div> 
+    <div id="pop-INDONESIA"><pop-up-indonesia></pop-up-indonesia></div>
+    <div id="pop-PAPUA"><pop-up-papua></pop-up-papua></div>  
+    <div id="pop-GUINA"><pop-up-guina></pop-up-guina></div>  
+    <div id="pop-AUSTRALIA"><pop-up-australia></pop-up-australia></div>  
+    <div id="pop-NEWZ"><pop-up-newz></pop-up-newz></div> 
+        
+    <div id="pop-TUNISIA"><pop-up-tunisia></pop-up-tunisia></div> 
+    <div id="pop-MOROCCO"><pop-up-morocco></pop-up-morocco></div>    
+    <div id="pop-ALGERIA"><pop-up-algeria></pop-up-algeria></div>    
+    <div id="pop-LIBYA"><pop-up-lybia></pop-up-lybia></div>    
+    <div id="pop-EGYPT"><pop-up-egypt></pop-up-egypt></div>    
+    <div id="pop-MAURITANIA"><pop-up-mauritania></pop-up-mauritania></div>    
+    <div id="pop-MALI"><pop-up-mali></pop-up-mali></div>    
+    <div id="pop-GUINEA"><pop-up-guinea></pop-up-guinea></div>    
+    <div id="pop-COTED"><pop-up-coted></pop-up-coted></div>    
+    <div id="pop-NIGER"><pop-up-niger></pop-up-niger></div>    
+    <div id="pop-CHAD"><pop-up-chad></pop-up-chad></div>    
+    <div id="pop-NIGERIA"><pop-up-nigeria></pop-up-nigeria></div>    
+    <div id="pop-CENTRAL"><pop-up-central></pop-up-central></div>    
+    <div id="pop-SUDAN"><pop-up-sudan></pop-up-sudan></div>    
+    <div id="pop-ERITREA"><pop-up-eritrea></pop-up-eritrea></div>    
+    <div id="pop-ETHIOPIA"><pop-up-ethiopia></pop-up-ethiopia></div>    
+    <div id="pop-SOMALIA"><pop-up-somalia></pop-up-somalia></div>    
+    <div id="pop-GABON"><pop-up-gabon></pop-up-gabon></div>    
+    <div id="pop-DRC"><pop-up-drc></pop-up-drc></div>    
+    <div id="pop-UGANDA"><pop-up-uganda></pop-up-uganda></div>    
+    <div id="pop-KENYA"><pop-up-kenya></pop-up-kenya></div>    
+    <div id="pop-TANZANIA"><pop-up-tanzania></pop-up-tanzania></div>    
+    <div id="pop-ANGOLA"><pop-up-angola></pop-up-angola></div>    
+    <div id="pop-ZAMBIA"><pop-up-zambia></pop-up-zambia></div>    
+    <div id="pop-MOZAMBIQUE"><pop-up-mozambique></pop-up-mozambique></div>    
+    <div id="pop-ZIMBABWE"><pop-up-zimbabwe></pop-up-zimbabwe></div>    
+    <div id="pop-MADAGASCAR"><pop-up-madagascar></pop-up-madagascar></div>    
+    <div id="pop-SOUTHA"><pop-up-southa></pop-up-southa></div>    
+    <div id="pop-NAMIBIA"><pop-up-namibia></pop-up-namibia></div>    
+    <div id="pop-BOTSWANA"><pop-up-botswana></pop-up-botswana></div>    
+  
+        
+        
+        
+    <div id="pop-"><pop-up-></pop-up-></div> 
+    <div id="pop-z"><pop-up-></pop-up-></div>  
+    <div id="pop-a"><pop-up-></pop-up-></div>  
+        </div>
+	</body>
+        <script src="/js/script_pagetabs.js"></script>
+  
+ <script src="/js/script_star.js"></script>
+
+  <script src="/js/Script.js"></script>
+   
+    <script src="/js/script_arrow.js"></script>
+     <script src="/js/pop-up.js"></script>
+
+    
+
+
+
+</html>

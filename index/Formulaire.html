@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulaire </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/Bootstrap.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body background="https://cdn.glitch.com/5453b08a-55b4-46a5-a4ec-b6d64acc3c4b%2F395799649921c1d.jpg?1536328482939" style="background-size:cover">
+
+  
+
+  
+  <table id="LogForm">
+    <tr>
+    </table>
+    <form  style="text-align: center" id="signin" name="sign" @submit="checkForm" action="" method="POST" novalidate="true" >
+      <div class="container"  style="text-align: center">
+      <p   class="list-group-item"  v-if="errors.length">
+     <b>Please correct the following error(s):</b>
+      <ul class="list-group">
+       <li class="list-group-item" v-for="error in errors">{{ error }}</li>
+     </ul>
+      </p>
+    </div>
+    <table class="test">
+      <tr> 
+       <td align="right"><h3><label  class="label label-default" for="name">Username:</label></h3></td>
+       <td><input type="text" class="form-control" name="name" id="name" placeholder="Your username" v-model="name"></td>
+      </tr>
+      <tr>
+          <td align="right"> <h3><label class="label label-default" for ="email">Email :</label></h3></td>
+          <td><input type="email" class="form-control" name="email" id="email" placeholder="Your email" v-model="email" ></td>
+      </tr> 
+      <tr>
+          <td align="right"> <h3><label class="label label-default" for ="password">Password :</label></h3></td>
+          <td><input type="password" class="form-control" name="password1" id="password" placeholder="Your password" v-model="password" ></td>
+      </tr> 
+      <tr>
+          <td align="right"> <h3><label class="label label-default" for ="password2">Confirmation Password :</label></h3></td>
+          <td><input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm password" v-model="password2" ></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="Submit" name="form" >  
+        </td>
+      </tr>
+    </table>
+  </form>
+  
+  
+  
+  
+  
+  <form id="login" name="log" @submit="checkForm" action="" method="POST">
+    <div class="container" style="margin-left: auto;margin-right: auto">
+      <p   class="list-group-item"  v-if="errors.length">
+     <b>Please correct the following error(s):</b>
+      <ul class="list-group">
+       <li class="list-group-item" v-for="error in errors">{{ error }}</li>
+     </ul>
+      </p>
+    </div>
+    <table class="test">
+      <tr>
+      <td align="right"><h3><label  class="label label-default" for="name_login">Username:</label></h3></td>
+       <td><input type="text" class="form-control" name="name_login" id="name_login" placeholder="Your username" v-model="name_login"></td>
+      </tr>
+      <tr>
+          <td align="right"> <h3><label class="label label-default" for ="password_login">Password :</label></h3></td>
+          <td><input type="password" class="form-control" name="password_login" id="password_login" placeholder="Your password" v-model="password_login" ></td>
+      </tr> 
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="Connection" name="form">  
+        </td>
+      </tr>      
+    </table>
+  </form>
+</tr>
+</table>
+
+
+    
+  </body>
+ <script src="/js/Script.js"></script>
+</html>
